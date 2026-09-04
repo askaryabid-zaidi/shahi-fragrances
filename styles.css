@@ -1,0 +1,83 @@
+:root{
+  --ivory:#f4f0e7;
+  --ivory-2:#ebe3d5;
+  --charcoal:#171713;
+  --charcoal-2:#24231f;
+  --gold:#b89a68;
+  --gold-light:#d8c39e;
+  --muted:#6b675f;
+  --line:rgba(23,23,19,.15);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--charcoal);font-family:Inter,system-ui,sans-serif;font-weight:300;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:auto}
+.site-header{position:absolute;z-index:20;top:0;left:0;width:100%;display:flex;align-items:center;padding:30px clamp(24px,6vw,84px);color:#f7f1e7}
+.brand{font-family:"Cormorant Garamond",serif;font-size:34px;letter-spacing:.28em;color:var(--gold-light);font-weight:600}
+.nav{margin-left:auto;display:flex;gap:30px;font-size:13px}
+.nav a{opacity:.88;position:relative}
+.nav a:after{content:"";position:absolute;left:0;bottom:-8px;width:0;height:1px;background:var(--gold);transition:.35s ease}
+.nav a:hover:after{width:100%}
+.menu-toggle{display:none;margin-left:auto;background:none;border:1px solid rgba(255,255,255,.35);color:white;padding:7px 10px}
+.hero{min-height:720px;background:#13120f;color:#f8f1e6;display:grid;grid-template-columns:42% 58%;overflow:hidden}
+.hero-copy{padding:190px 5vw 80px 7vw;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;position:relative;z-index:2}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:var(--gold)}
+.hero h1,.section-intro h2,.statement h2,.story h2,.why h2{font-family:"Cormorant Garamond",serif;font-weight:500;line-height:.88;margin:.2em 0}
+.hero h1{font-size:clamp(72px,8.5vw,132px);color:#e7d4b3;letter-spacing:-.035em}
+.hero-sub{font-size:15px;margin:18px 0 28px;color:#ddd5c9}
+.button{border:1px solid rgba(216,195,158,.55);padding:13px 18px;font-size:12px;letter-spacing:.03em;transition:.3s ease}
+.button:hover{background:var(--gold);color:#15130f}
+.hero-visual{background:linear-gradient(90deg,#13120f 0%,rgba(19,18,15,.25) 25%,rgba(19,18,15,0) 60%),url('assets/hero.jpg') center/cover no-repeat;transform:scale(1.02)}
+.section-pad{padding:100px clamp(24px,7vw,100px)}
+.statement{text-align:center;max-width:900px;margin:auto}
+.ornament{color:var(--gold);font-size:20px;margin-bottom:12px}
+.statement h2{font-size:clamp(42px,5vw,68px);line-height:1.05}
+.statement p{max-width:670px;margin:20px auto 0;color:var(--muted)}
+.collection{display:grid;grid-template-columns:280px 1fr;gap:48px;border-top:1px solid var(--line)}
+.section-intro h2{font-size:52px;line-height:1}
+.section-intro>p:last-child{color:var(--muted);font-size:14px;max-width:320px}
+.fragrance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.fragrance-card{background:#f8f5ee;border:1px solid var(--line);overflow:hidden}
+.fragrance-card img{aspect-ratio:1.08/1;object-fit:cover;transition:transform .7s ease,filter .7s ease}
+.fragrance-card:hover img{transform:scale(1.035);filter:saturate(.9)}
+.fragrance-card div{padding:18px 16px}
+.fragrance-card h3{font-family:"Cormorant Garamond",serif;font-size:28px;margin:0;font-weight:500}
+.fragrance-card p{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin:3px 0 0}
+.manifesto{min-height:340px;position:relative;background:url('assets/ambient.jpg') center/cover no-repeat;display:grid;place-items:center;overflow:hidden}
+.manifesto-overlay{position:absolute;inset:0;background:rgba(18,17,14,.72)}
+.manifesto p{position:relative;color:#f5ede1;font-family:"Cormorant Garamond",serif;font-size:clamp(42px,5vw,70px);line-height:1.02;text-align:center;margin:0}
+.why{display:grid;grid-template-columns:280px 1fr;gap:50px}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.principle{padding:38px 34px;border-right:1px solid var(--line)}
+.principle:last-child{border-right:none}
+.principle span{font-size:11px;letter-spacing:.15em;color:var(--gold)}
+.principle h3{font-family:"Cormorant Garamond",serif;font-size:30px;font-weight:500;margin:24px 0 10px}
+.principle p{font-size:13px;color:var(--muted)}
+.products{background:#ede5d8}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:38px}
+.product-grid img{aspect-ratio:1.25/1;object-fit:cover;filter:saturate(.85);transition:.5s ease}
+.product-grid img:hover{transform:translateY(-4px);filter:saturate(1)}
+.story{display:grid;grid-template-columns:1fr 1fr;min-height:530px;background:#f6f2ea}
+.story-image{background:linear-gradient(0deg,rgba(14,13,11,.25),rgba(14,13,11,.25)),url('assets/story.jpg') center/cover no-repeat}
+.story-copy{display:flex;flex-direction:column;justify-content:center}
+.story h2{font-size:64px}
+.story-copy p{max-width:560px;color:var(--muted)}
+.text-link{margin-top:18px;color:#8d7248;font-size:13px}
+.footer{background:#1b1a17;color:#cfc8bd;display:grid;grid-template-columns:1.5fr .8fr .8fr 1.5fr;gap:46px;padding:70px clamp(24px,7vw,100px) 35px;font-size:12px}
+.footer h4{color:#f5eee2;font-size:12px;font-weight:500;margin:0 0 15px;text-transform:uppercase;letter-spacing:.12em}
+.footer a{display:block;margin:5px 0;color:#bbb3a7}
+.footer a:hover{color:var(--gold-light)}
+.footer-brand p{color:#918b82}
+.copyright{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.09);padding-top:25px;color:#777168}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){
+ .site-header{position:fixed;background:rgba(20,19,16,.9);backdrop-filter:blur(10px);padding:18px 24px}
+ .brand{font-size:26px}.menu-toggle{display:block}.nav{display:none;position:absolute;top:68px;left:0;right:0;background:#1b1a17;padding:20px 24px;flex-direction:column;gap:16px}.nav.open{display:flex}
+ .hero{grid-template-columns:1fr;min-height:820px}.hero-copy{padding:150px 28px 45px}.hero-visual{min-height:390px;order:2;background-position:center}
+ .collection,.why{grid-template-columns:1fr}.fragrance-grid{grid-template-columns:repeat(2,1fr)}
+ .principles{grid-template-columns:1fr}.principle{border-right:none;border-bottom:1px solid var(--line)}.principle:last-child{border-bottom:none}
+ .product-grid{grid-template-columns:repeat(2,1fr)}.story{grid-template-columns:1fr}.story-image{min-height:360px}.footer{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){.section-pad{padding:72px 22px}.fragrance-grid,.product-grid,.footer{grid-template-columns:1fr}.footer{gap:28px}.hero h1{font-size:72px}.story h2{font-size:52px}.manifesto{min-height:280px}}
