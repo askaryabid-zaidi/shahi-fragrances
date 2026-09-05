@@ -1,12 +1,17 @@
-# Shahi Fragrances Website
+# Shahi Fragrances Website — V3
 
-Static website prepared for GitHub Pages.
+This build keeps the original approved Shahi website direction and fixes the earlier implementation problems.
 
-## Publish
-1. Create a GitHub repository, e.g. `shahi-fragrances`.
-2. Upload all files and folders from this package to the repository root.
-3. In Settings → Pages, publish from the `main` branch and `/ (root)`.
-4. In Settings → Pages → Custom domain, use `shahifragrances.com`.
-5. Configure the domain DNS records for GitHub Pages, then enable HTTPS when available.
+## What changed
+- Uses the official Shahi logo supplied by the brand owner.
+- Rebuilt hero without the old screenshot-inside-a-website crop.
+- Replaced low-resolution fragrance crops with clean scalable SVG artwork.
+- Removed duplicated text baked into images.
+- Preserved the dark cinematic hero → ivory collection → dark fragrance statement → Why Shahi → Products → Story → Contact/footer flow.
+- Product section is a stylised web presentation using the official logo; it does not pretend to be final product photography.
+- Improved desktop/tablet/mobile layout and safer scroll animation.
 
-The included `CNAME` file already contains `shahifragrances.com`.
+## Upload to GitHub Pages
+Upload the contents of this folder to the root of the existing `shahi-fragrances` repository and overwrite files with the same names. Upload every file in `assets/` into the existing `assets` folder.
+
+Custom domain remains `shahifragrances.com` through the included `CNAME` file.
